@@ -118,6 +118,10 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
+# Power
+PRODUCT_PACKAGES += \
+    power.qcom:64
+
 #PRODUCT_PACKAGES += \
     android.hardware.nfc@1.1 \
     android.hardware.nfc@1.0
