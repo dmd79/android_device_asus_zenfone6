@@ -122,6 +122,10 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.1 \
     android.hardware.nfc@1.0
 
+# Power
+PRODUCT_PACKAGES += \
+    power.qcom:64
+
 # Prebuilt
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/asus/zenfone6/prebuilt/system,system) \
