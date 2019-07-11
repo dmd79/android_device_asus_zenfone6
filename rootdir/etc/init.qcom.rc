@@ -1,0 +1,3 @@
+on boot
+    # Gestures
+    chown system system /proc/driver/dclick
