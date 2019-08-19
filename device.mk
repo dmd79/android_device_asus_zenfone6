@@ -68,6 +68,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Camera
+PRODUCT_PACKAGES += \
+    CameraTile
+
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.qcom.rc
