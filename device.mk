@@ -128,7 +128,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.qcom:64
+    android.hardware.power@1.2-service.asus_msmnile
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
