@@ -124,7 +124,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.qcom:64
+    android.hardware.power@1.2-service.asus_msmnile
 
 #PRODUCT_PACKAGES += \
     android.hardware.nfc@1.1 \
