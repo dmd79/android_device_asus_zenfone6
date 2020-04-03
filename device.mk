@@ -20,15 +20,13 @@
 # product configuration (apps).
 #
 $(call inherit-product, vendor/asus/zenfone6/zenfone6-vendor.mk)
-$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    vendor/omni/overlay/CarrierConfig
+ DEVICE_PACKAGE_OVERLAYS += \
+     $(LOCAL_PATH)/overlay
 
 # A/B
 AB_OTA_UPDATER := true
@@ -41,12 +39,12 @@ AB_OTA_PARTITIONS += \
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/omnipreopt_script \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
 PRODUCT_PACKAGES += \
-    omnipreopt_script
+    otapreopt_script
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -69,17 +67,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
-
-# Charger images
-PRODUCT_PACKAGES += \
-    omni_charger_res_images \
-    animation.txt \
-    font_charger.png
-
-# DeviceParts
-PRODUCT_PACKAGES += \
-    DeviceParts \
-    OmniDisplayManager
 
 # Display
 PRODUCT_PACKAGES += \
@@ -171,7 +158,11 @@ PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
-    qti_telephony_utils.xml
+    qti_telephony_utils.xml \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # Update engine
 PRODUCT_PACKAGES += \
