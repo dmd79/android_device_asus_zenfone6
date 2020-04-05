@@ -19,6 +19,13 @@
 # product configuration (apps).
 #
 
+# GApps
+WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
+
+
 # Sample: This is where we'd set a backup provider if we had one
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
