@@ -22,6 +22,12 @@ DEVICE_PATH := device/asus/zenfone6
 
 BOARD_VENDOR := asus
 
+# Gapps
+TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
+WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
