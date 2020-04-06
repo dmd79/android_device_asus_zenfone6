@@ -1,3 +1,6 @@
 on boot
     # Gestures
     chown system system /proc/driver/dclick
+
+    # Google Key
+    write /sys/devices/platform/soc/soc:asustek_googlekey/googlekey_enable 1
