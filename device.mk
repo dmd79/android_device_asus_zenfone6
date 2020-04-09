@@ -122,13 +122,11 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.asus_msmnile
 
 # NFC - NQ (NXP)
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
+    NfcNci \
     Tag \
+    SecureElement \
     com.android.nfc_extras
-
-#PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.1 \
-    android.hardware.nfc@1.0
 
 # Power
 PRODUCT_PACKAGES += \
